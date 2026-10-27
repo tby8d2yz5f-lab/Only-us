@@ -92,6 +92,39 @@ nav a:hover{color:#f0c5ce}
 @keyframes minimalPulse{0%,100%{transform:scale(1);opacity:.9}50%{transform:scale(1.045);opacity:1}}
 @media(max-width:700px){.minimal-space{min-height:58vh}.minimal-orbit{width:160px;height:160px}.minimal-space:before{width:235px;height:235px}.minimal-space:after{width:300px;height:300px}}
 @media(prefers-reduced-motion:reduce){.minimal-heart{animation:none}}
+
+/* Usability polish: consistent controls and mobile touch targets */
+html{scroll-behavior:smooth;scroll-padding-top:18px}
+button,a,input,textarea,select{-webkit-tap-highlight-color:transparent}
+button:focus-visible,a:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible{outline:2px solid #d99baa;outline-offset:3px}
+.btn{min-height:40px;transition:background .18s ease,border-color .18s ease,transform .18s ease}
+.btn:hover{border-color:#b77b8a;background:#39232b}
+.btn.primary:hover{background:#884252}
+.btn:disabled{opacity:.55;cursor:wait}
+.panel{scroll-margin-top:14px}
+.field{min-height:44px}
+textarea.field{min-height:112px;line-height:1.8}
+input[type="date"]{color-scheme:dark}
+input[type="file"]{max-width:100%;font-size:12px}
+.entry{overflow-wrap:anywhere}
+.entry .btn{margin-top:6px}
+.notice{line-height:1.85;overflow-wrap:anywhere}
+#private>.sectionhead{padding-top:8px}
+#private> .btn{margin-top:10px}
+@media(max-width:700px){
+ .wrap{width:calc(100% - 24px)}
+ .top{gap:12px}
+ nav{flex-wrap:wrap;justify-content:flex-end;line-height:1.8}
+ .panel{padding:16px;border-radius:11px}
+ .sectionhead{gap:8px}
+ .field{font-size:16px}
+ .btn{min-height:42px;padding:10px 15px}
+ .actions .btn{flex:0 0 auto}
+ .photo-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .footer{padding-bottom:calc(28px + env(safe-area-inset-bottom))}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
 </style></head>
 <body><div class="wrap">
 <header class="top"><a class="brand" href="#">ONLY <span>US</span></a><nav><a href="#story">OUR STORY</a><a href="#private">PRIVATE SPACE</a><a href="#memories">MEMORIES</a></nav></header>
