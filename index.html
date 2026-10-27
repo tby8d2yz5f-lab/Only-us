@@ -73,32 +73,24 @@ nav a:hover{color:#f0c5ce}
 
 
 
-/* Minimal, dedicated couple space */
-#coupleHomePanel{padding:0;overflow:hidden;background:#120f12;border-color:#4a3039}
-.minimal-space{position:relative;min-height:620px;padding:44px 22px 38px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;overflow:hidden;background:radial-gradient(ellipse at 50% 42%,#54263366 0,transparent 39%),linear-gradient(180deg,#171116,#100d10 78%)}
-.minimal-space:before,.minimal-space:after{content:"";position:absolute;left:50%;top:41%;width:310px;height:310px;border:1px solid #dca3b51a;border-radius:50%;transform:translate(-50%,-50%);pointer-events:none}
-.minimal-space:after{width:390px;height:390px;border-color:#dca3b50d}
-.minimal-kicker{font-size:9px;letter-spacing:.3em;color:#d6a2b0;position:relative;z-index:1}
-.minimal-orbit{position:relative;width:220px;height:220px;display:grid;place-items:center;margin:28px auto 24px}
-.orbit-ring{position:absolute;border:1px solid #dba4b62e;border-radius:50%}
-.ring-one{inset:14px;transform:rotate(-24deg);border-top-color:#dba4b6a0}
-.ring-two{inset:0;border-color:#dba4b619;border-bottom-color:#dba4b666}
-.minimal-heart{font-size:65px;font-weight:200;line-height:1;color:#e5a9ba;text-shadow:0 0 34px #c75c7b66;animation:minimalPulse 4s ease-in-out infinite}
-.orbit-dot{position:absolute;width:6px;height:6px;border-radius:50%;background:#e8b3c0;box-shadow:0 0 12px #e8b3c0a0}
-.dot-one{top:24px;right:43px}.dot-two{bottom:33px;left:33px;width:4px;height:4px;opacity:.7}
-.minimal-title{font-size:clamp(30px,7vw,42px);font-weight:500;line-height:1.45;letter-spacing:.04em;margin-top:3px}
-.minimal-title em{font-style:normal;color:#e2a5b5}
-.minimal-subtitle{font-size:12px;line-height:1.9;color:#b8a6ad;max-width:280px;margin:12px 0 22px}
-.minimal-divider{display:flex;align-items:center;justify-content:center;gap:13px;width:130px;color:#bb8292}
-.minimal-divider span{height:1px;width:38px;background:#80505e}
-.minimal-divider b{font-size:17px;font-weight:400}
-.minimal-counter{display:flex;align-items:baseline;gap:7px;margin-top:18px}
-.minimal-counter strong{font-size:42px;line-height:1.2;font-weight:400;letter-spacing:-.04em;color:#f5e5e9}
+
+/* Ultra-minimal private page */
+#coupleHomePanel{padding:0;overflow:hidden;border-color:#39262d;background:#100d10}
+.minimal-space{min-height:64vh;padding:32px 15px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;position:relative;overflow:hidden;background:radial-gradient(ellipse at center,#49202c55 0,transparent 52%),#100d10}
+.minimal-space:before,.minimal-space:after{content:"";position:absolute;left:50%;top:43%;border:1px solid #dba4b51a;border-radius:50%;transform:translate(-50%,-50%);pointer-events:none}
+.minimal-space:before{width:270px;height:270px}
+.minimal-space:after{width:350px;height:350px;border-color:#dba4b50c}
+.minimal-orbit{position:relative;width:180px;height:180px;display:grid;place-items:center;margin:0 auto 28px}
+.orbit-ring{position:absolute;border:1px solid #dba4b52b;border-radius:50%}
+.ring-one{inset:12px;border-top-color:#dba4b580;transform:rotate(-24deg)}
+.ring-two{inset:0;border-color:#dba4b516;border-bottom-color:#dba4b55c}
+.minimal-heart{font-size:65px;font-weight:200;line-height:1;color:#e5a9ba;text-shadow:0 0 30px #c75c7b55;animation:minimalPulse 4s ease-in-out infinite}
+.minimal-counter{display:flex;align-items:baseline;gap:6px;position:relative;z-index:1}
+.minimal-counter strong{font-size:44px;line-height:1.2;font-weight:400;letter-spacing:-.04em;color:#f5e5e9}
 .minimal-counter span{font-size:13px;color:#d6a2b0}
-.minimal-caption{font-size:10px;color:#9e8790;letter-spacing:.06em;margin-top:5px}
-.minimal-foot{position:relative;margin-top:31px;font-size:8px;letter-spacing:.28em;color:#8f707b}
-@keyframes minimalPulse{0%,100%{transform:scale(1);opacity:.9}50%{transform:scale(1.055);opacity:1}}
-@media(max-width:700px){.minimal-space{min-height:570px;padding:34px 15px}.minimal-orbit{width:190px;height:190px;margin:26px auto 20px}.minimal-space:before{width:275px;height:275px}.minimal-space:after{width:340px;height:340px}}
+.minimal-caption{position:relative;z-index:1;font-size:9px;color:#9e8790;letter-spacing:.16em;margin-top:9px}
+@keyframes minimalPulse{0%,100%{transform:scale(1);opacity:.9}50%{transform:scale(1.045);opacity:1}}
+@media(max-width:700px){.minimal-space{min-height:58vh}.minimal-orbit{width:160px;height:160px}.minimal-space:before{width:235px;height:235px}.minimal-space:after{width:300px;height:300px}}
 @media(prefers-reduced-motion:reduce){.minimal-heart{animation:none}}
 </style></head>
 <body><div class="wrap">
@@ -108,7 +100,7 @@ nav a:hover{color:#f0c5ce}
 <div class="notice" id="installTip">把 ONLY US 添加到手机主屏幕：iPhone 请在 Safari 点“分享”→“添加到主屏幕”；安卓浏览器可从菜单选择“安装应用”或“添加到主屏幕”。<button class="btn" id="hideInstallTip" style="margin-left:8px">知道了</button></div><section class="section hidden" id="private"><div class="sectionhead"><div><div class="eyebrow">PRIVATE SPACE</div><h2>只属于你们的空间</h2></div><p>请使用自己的账号登录</p></div>
 <div id="authPanel" class="panel"><p class="muted">登录后可记录共同回忆。请勿在公共设备上保持登录。</p><div class="authgrid"><div><h3>登录</h3><label class="muted" for="loginEmail">邮箱</label><input class="field" id="loginEmail" type="email" autocomplete="email" placeholder="邮箱地址"><label class="muted" for="loginPassword">密码</label><input class="field" id="loginPassword" type="password" autocomplete="current-password" placeholder="密码"><button class="btn primary" id="loginBtn">登录</button></div></div><div id="authMsg" class="notice hidden" role="status"></div></div>
 <div id="appPanel" class="hidden"><div class="panel"><div class="sectionhead"><div><div class="eyebrow">SIGNED IN</div><h2 id="userLabel">已登录</h2><p class="muted">情侣空间：ONLY US</p></div><button class="btn" id="logoutBtn">退出登录</button></div><div id="appMsg" class="notice hidden" role="status"></div></div>
-<div class="panel" id="coupleHomePanel"><div class="minimal-space"><div class="minimal-kicker">ONLY YOU · ONLY ME</div><div class="minimal-orbit"><span class="orbit-ring ring-one"></span><span class="orbit-ring ring-two"></span><span class="minimal-heart">♡</span><span class="orbit-dot dot-one"></span><span class="orbit-dot dot-two"></span></div><div class="minimal-title">世界很大，<br><em>幸好有你。</em></div><p class="minimal-subtitle">愿每一个普通的日子，都因为彼此而闪闪发光。</p><div class="minimal-divider"><span></span><b>∞</b><span></span></div><div class="minimal-counter"><strong id="spaceDays">—</strong><span>天</span></div><div class="minimal-caption">自 2026 年 8 月 21 日起</div><div class="minimal-foot">JUST US, ALWAYS.</div></div></div>
+<div class="panel" id="coupleHomePanel"><div class="minimal-space"><div class="minimal-orbit"><span class="orbit-ring ring-one"></span><span class="orbit-ring ring-two"></span><span class="minimal-heart">♡</span></div><div class="minimal-counter"><strong id="spaceDays">—</strong><span>天</span></div><div class="minimal-caption">2026.08.21 — FOREVER</div></div></div>
 <div class="panel" id="memoryForm"><div class="eyebrow">DAILY NOTES</div><h3>记录一段回忆</h3><input class="field" id="memoryTitle" maxlength="120" placeholder="标题，例如：第一次一起看海"><div class="row"><input class="field" id="memoryDate" type="date"><select class="field" id="memoryMood"><option value="">今天的心情（可选）</option><option>开心</option><option>平静</option><option>想念</option><option>感动</option><option>特别的一天</option></select></div><textarea class="field" id="memoryContent" maxlength="10000" placeholder="写下今天想留下的事……"></textarea><button class="btn primary" id="saveMemory">保存回忆</button></div>
 <div class="panel" id="diaryPanel"><div class="sectionhead"><div><div class="eyebrow">PRIVATE DIARY</div><h3>只属于自己的日记</h3><p class="muted">默认只有你本人可以查看和管理。</p></div><button class="btn" id="refreshDiaries">刷新</button></div><input class="field" id="diaryTitle" maxlength="120" placeholder="日记标题"><div class="row"><input class="field" id="diaryDate" type="date"><select class="field" id="diaryMood"><option value="">选择今天的心情（可选）</option><option>开心</option><option>平静</option><option>想念</option><option>难过</option><option>感动</option><option>焦虑</option><option>其他</option></select></div><textarea class="field" id="diaryContent" maxlength="20000" placeholder="写下不想公开的心事……"></textarea><div class="actions"><button class="btn primary" id="saveDiary">保存日记</button><button class="btn hidden" id="cancelDiaryEdit">取消编辑</button></div><div id="diaryList" style="margin-top:16px"><p class="muted">登录后加载日记。</p></div></div>
 <div class="panel" id="memoryTimelinePanel"><div class="sectionhead"><div><div class="eyebrow">OUR TIMELINE</div><h3>共同回忆</h3></div><button class="btn" id="refreshBtn">刷新</button></div><div id="memoryList" class="muted">登录后加载记录。</div></div>
