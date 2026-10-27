@@ -384,6 +384,8 @@ input.field[type="date"]{color-scheme:dark}
   textarea.field{min-height:116px}
 }
 @media(prefers-reduced-motion:reduce){.field{transition:none}}
+
+.hub-back-row{display:flex;justify-content:flex-start;margin:0 0 22px}.hub-back-btn{border-color:#684552;background:rgba(42,26,34,.72);color:#e6c1cc;border-radius:999px;padding:10px 16px}
 </style></head>
 <body><div class="wrap">
 <header class="top"><a class="brand" href="#">ONLY <span>US</span></a><nav><a href="#story">OUR STORY</a><a href="#private">PRIVATE SPACE</a><a href="#memories">MEMORIES</a></nav></header>
@@ -402,7 +404,7 @@ input.field[type="date"]{color-scheme:dark}
 </div>
 
 </section>
-<section class="section" id="memories"><div class="sectionhead"><div><div class="eyebrow">OUR LITTLE UNIVERSE</div><h2>把相爱的日常，慢慢写成永远。</h2></div><p>每一段回忆，都值得被好好收藏。</p></div><div class="grid"><a class="card card-link" href="#private" data-feature="timeline"><div class="icon">✧</div><h3>时光来信</h3><p>把一起走过的日子，写成只属于我们的故事。</p></a><a class="card card-link" href="#private" data-feature="photos"><div class="icon">▧</div><h3>光影收藏</h3><p>收藏帅哥、小熊与我们共同的光影。</p></a><a class="card card-link" href="#private" data-feature="diary"><div class="icon">♡</div><h3>心事手札</h3><p>把不必说出口的话，轻轻写给自己。</p></a><a class="card card-link" href="#private" data-feature="anniversaries"><div class="icon">⌁</div><h3>岁时纪念</h3><p>记住每一个值得珍藏的日子。</p></a><a class="card card-link" href="#private" data-feature="wishes"><div class="icon">＋</div><h3>共赴清单</h3><p>把想一起完成的事，慢慢变成我们的未来。</p></a><a class="card card-link" href="#private" data-feature="space"><div class="icon">∞</div><h3>只属于我们</h3><p>点击进入情侣空间或登录账号。</p></a></div></section>
+<section class="section" id="memories"><div class="hub-back-row"><button type="button" class="btn hub-back-btn" id="hubBackHome">← 返回首页</button></div><div class="sectionhead"><div><div class="eyebrow">OUR LITTLE UNIVERSE</div><h2>把相爱的日常，慢慢写成永远。</h2></div><p>每一段回忆，都值得被好好收藏。</p></div><div class="grid"><a class="card card-link" href="#private" data-feature="timeline"><div class="icon">✧</div><h3>时光来信</h3><p>把一起走过的日子，写成只属于我们的故事。</p></a><a class="card card-link" href="#private" data-feature="photos"><div class="icon">▧</div><h3>光影收藏</h3><p>收藏帅哥、小熊与我们共同的光影。</p></a><a class="card card-link" href="#private" data-feature="diary"><div class="icon">♡</div><h3>心事手札</h3><p>把不必说出口的话，轻轻写给自己。</p></a><a class="card card-link" href="#private" data-feature="anniversaries"><div class="icon">⌁</div><h3>岁时纪念</h3><p>记住每一个值得珍藏的日子。</p></a><a class="card card-link" href="#private" data-feature="wishes"><div class="icon">＋</div><h3>共赴清单</h3><p>把想一起完成的事，慢慢变成我们的未来。</p></a><a class="card card-link" href="#private" data-feature="space"><div class="icon">∞</div><h3>只属于我们</h3><p>点击进入情侣空间或登录账号。</p></a></div></section>
 </main><footer class="footer"><span>ONLY US © 2026</span><span>Made for two, kept with care.</span></footer></div>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 
@@ -455,11 +457,12 @@ $('diaryDate').value=new Date().toISOString().slice(0,10);
 
 let activeFeature=null;
 const featureTargets={timeline:'memoryTimelinePanel',photos:'photoArchive',diary:'diaryPanel',anniversaries:'anniversaryPanel',wishes:'wishlistPanel',space:'coupleHomePanel'};
-function showHome(){activeFeature=null;$('story').classList.remove('hidden');$('memories').classList.add('hidden');$('private').classList.add('hidden');document.querySelectorAll('#appPanel > .panel').forEach(p=>p.classList.remove('hidden'));window.scrollTo({top:0,behavior:'smooth'});}
-function showSpaceHub(){activeFeature=null;$('story').classList.add('hidden');$('memories').classList.remove('hidden');$('private').classList.add('hidden');$('memories').scrollIntoView({behavior:'smooth',block:'start'});}
-function openFeature(feature){activeFeature=feature;$('story').classList.add('hidden');$('memories').classList.add('hidden');$('private').classList.remove('hidden');$('private').scrollIntoView({behavior:'smooth',block:'start'});if($('appPanel').classList.contains('hidden')){setTimeout(()=>$('loginEmail').focus({preventScroll:true}),350);return;}applyFeatureView();}
+function showHome(){activeFeature=null;$('story').classList.remove('hidden');$('story').style.display='';$('memories').classList.add('hidden');$('memories').style.display='none';$('private').classList.add('hidden');$('private').style.display='none';document.querySelectorAll('#appPanel > .panel').forEach(p=>p.classList.remove('hidden'));window.scrollTo({top:0,behavior:'smooth'});}
+function showSpaceHub(){activeFeature=null;$('story').classList.add('hidden');$('story').style.display='none';$('memories').classList.remove('hidden');$('memories').style.display='';$('private').classList.add('hidden');$('private').style.display='none';$('memories').scrollIntoView({behavior:'smooth',block:'start'});}
+function openFeature(feature){activeFeature=feature;$('story').classList.add('hidden');$('story').style.display='none';$('memories').classList.add('hidden');$('memories').style.display='none';$('private').classList.remove('hidden');$('private').style.display='';$('private').scrollIntoView({behavior:'smooth',block:'start'});if($('appPanel').classList.contains('hidden')){setTimeout(()=>$('loginEmail').focus({preventScroll:true}),350);return;}applyFeatureView();}
 function applyFeatureView(){if(!activeFeature)return;const targetId=featureTargets[activeFeature]||'coupleHomePanel';document.querySelectorAll('#appPanel > .panel').forEach(p=>{const isSharedTimeline=activeFeature==='timeline'&&(p.id==='memoryForm'||p.id==='memoryTimelinePanel');p.classList.toggle('hidden',p.id!==targetId&&!isSharedTimeline&&p!==$('appPanel').firstElementChild);});const target=$(targetId);if(target)target.scrollIntoView({behavior:'smooth',block:'start'});}
 $('enterSpaceBtn').addEventListener('click',event=>{event.preventDefault();showSpaceHub()});
+$('hubBackHome').addEventListener('click',showHome);
 document.querySelector('nav a[href="#memories"]').addEventListener('click',event=>{event.preventDefault();showSpaceHub()});
 document.querySelectorAll('[data-feature]').forEach(card=>card.addEventListener('click',event=>{event.preventDefault();openFeature(card.dataset.feature)}));
 document.querySelectorAll('[data-hub-feature]').forEach(card=>card.addEventListener('click',()=>openFeature(card.dataset.hubFeature)));
