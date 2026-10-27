@@ -225,6 +225,55 @@ input[type="file"]{max-width:100%;font-size:12px}
  #memories .card{min-height:140px}
 }
 
+
+/* Quiet luxury: restrained monochrome rose palette */
+:root{--bg:#100f10;--panel:#171516;--line:#302a2c;--text:#e8e3e4;--muted:#a49b9e;--soft:#bda5ac}
+body{background:#100f10;color:var(--text)}
+.wrap{width:min(1080px,calc(100% - 44px))}
+.top{border-bottom:1px solid #ffffff0d}
+.brand span,.hero .eyebrow,.date,.sectionhead .eyebrow{color:#b49aa2}
+.hero h1 em{background:none;color:#c4a9b1;-webkit-text-fill-color:initial}
+.intro,.days,.card p,.muted{color:#a49b9e}
+.days strong{color:#e8e3e4;font-weight:400}
+.pill{border-color:#625057;color:#d0bdc2;background:transparent}
+.pill:hover{background:#211b1e;transform:translateY(-1px)}
+.art{border:1px solid #41353a;background:radial-gradient(circle at 50% 43%,#33262c 0,#211b1f 38%,#151315 76%);box-shadow:none}
+.art:before,.art:after{border-color:#c4a9b112;box-shadow:none}
+.heart{color:#c7aab3;text-shadow:none;animation:none}
+.art-label,.artnote,.art-corner{color:#b9a3aa}
+.card{border:1px solid #302a2c;background:#171516;box-shadow:none;transition:border-color .18s ease,background .18s ease}
+.card:after{display:none}
+.card-link:hover{border-color:#65535a;background:#1b1819;transform:translateY(-1px)}
+.card .icon{border-color:#45363c;background:#211b1e;color:#c2a6af}
+.card h3{color:#e5dfe1}
+.section h2{color:#e8e3e4}
+.footer{border-top-color:#ffffff10;color:#9b9295}
+#coupleHomePanel{border-color:#302a2c;background:#141213;box-shadow:none}
+.minimal-space{background:radial-gradient(ellipse at 50% 42%,#35272d55 0,transparent 35%),#141213}
+.minimal-space:before,.minimal-space:after{border-color:#c4a9b10c;box-shadow:none}
+.space-kicker,.space-spark,.space-label,.minimal-caption,.space-footer{color:#b49ca4;text-shadow:none}
+.minimal-heart{color:#c8aab3;text-shadow:none;animation:none}
+.ring-one{border-top-color:#c4a9b155}
+.ring-two{border-bottom-color:#c4a9b12e}
+.minimal-counter strong{color:#e8e3e4;text-shadow:none;font-weight:300}
+.panel{border-color:#302a2c;background:#171516;box-shadow:none}
+.field{background:#121112;border-color:#393135;color:#e8e3e4}
+.field:focus{border-color:#79636b;box-shadow:0 0 0 2px #79636b1a}
+.btn{background:#1c191a;border-color:#4b3e43;color:#d6c8cc;box-shadow:none}
+.btn:hover{background:#252023;border-color:#6a555d}
+.btn.primary{background:#57434b;border-color:#6b535c;color:#f0e8eb}
+.btn.primary:hover{background:#65505a}
+.notice{background:#1b1719;border-color:#41353a;color:#c0b3b7}
+.photo-category-tabs .btn.active{background:#2b2226;border-color:#7b646d;color:#eadfe3;box-shadow:none}
+.photo-item{border-color:#302a2c;background:#171516}
+@media(max-width:700px){
+ .wrap{width:calc(100% - 28px)}
+ .hero h1 em{color:#c4a9b1}
+ .art{background:radial-gradient(circle at 50% 43%,#30252a 0,#211b1f 42%,#151315 78%)}
+ .card-link:hover{transform:none}
+}
+@media(prefers-reduced-motion:reduce){.heart,.minimal-heart,.art:before{animation:none!important}}
+
 </style></head>
 <body><div class="wrap">
 <header class="top"><a class="brand" href="#">ONLY <span>US</span></a><nav><a href="#story">OUR STORY</a><a href="#private">PRIVATE SPACE</a><a href="#memories">MEMORIES</a></nav></header>
