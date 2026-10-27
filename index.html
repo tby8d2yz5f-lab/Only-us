@@ -274,6 +274,52 @@ body{background:#100f10;color:var(--text)}
 }
 @media(prefers-reduced-motion:reduce){.heart,.minimal-heart,.art:before{animation:none!important}}
 
+
+/* Restore the original romantic rose palette, with restrained contrast */
+:root{--bg:#100d10;--panel:#1b171a;--line:#49343c;--text:#f7f0f2;--muted:#b8a9af;--soft:#e6b9c4}
+body{background:radial-gradient(ellipse at 74% 9%,#55253255 0,transparent 32%),radial-gradient(ellipse at 8% 42%,#35202a55 0,transparent 30%),#100d10;color:var(--text)}
+.top{border-bottom-color:#ffffff18}
+.brand span,.hero .eyebrow,.date,.sectionhead .eyebrow{color:#e8aebb}
+.hero h1 em{background:linear-gradient(105deg,#f5dce2,#c98193 78%);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent}
+.intro,.days,.card p,.muted{color:#c3b5ba}
+.days strong{color:#fff}
+.pill{border-color:#87515f;color:#f1cbd3;background:transparent}
+.pill:hover{background:#6e3441;transform:translateY(-2px)}
+.art{border:1px solid #71424e;background:radial-gradient(circle at 50% 42%,#6d3444 0,#3b202b 28%,#21161d 60%,#120f12 100%);box-shadow:inset 0 0 55px #100b10aa,0 24px 70px #0005}
+.art:before,.art:after{border-color:#f0c3cf30;box-shadow:0 0 28px #e3a8b61a}
+.heart{color:#f0b8c5;text-shadow:0 0 35px #f29bb866;animation:heartPulse 4s ease-in-out infinite}
+.art-label,.artnote,.art-corner{color:#e5c5cc}
+.card{border:1px solid #392b31;background:linear-gradient(145deg,#21191e,#171316 78%);box-shadow:none;transition:border-color .18s ease,background .18s ease,transform .18s ease}
+.card:after{display:block}
+.card-link:hover{border-color:#8e5262;background:linear-gradient(145deg,#2b1c23,#191417);transform:translateY(-2px)}
+.card .icon{border-color:#71424e;background:#3b202a;color:#f0bdc8}
+.card h3{color:#f7f0f2}
+.section h2{color:#f7f0f2}
+.footer{border-top-color:#ffffff18;color:#b8a9af}
+#coupleHomePanel{border-color:#583743;background:#100b0f;box-shadow:0 18px 55px #0005}
+.minimal-space{background:radial-gradient(ellipse at 50% 42%,#7b304333 0,transparent 32%),radial-gradient(ellipse at 50% 100%,#3b1b2944 0,transparent 48%),linear-gradient(145deg,#171015,#100d10 58%,#1b1016)}
+.minimal-space:before{border-color:#dba4b51c;box-shadow:0 0 70px #b34b6810}
+.minimal-space:after{border-color:#dba4b50c}
+.space-kicker,.space-spark,.space-label,.minimal-caption,.space-footer{color:#c89aa7;text-shadow:none}
+.minimal-heart{color:#f0b5c5;text-shadow:0 0 18px #e15c8150,0 0 55px #d94f7626;animation:minimalPulse 4s ease-in-out infinite}
+.ring-one{border-top-color:#f0bdca}
+.ring-two{border-bottom-color:#dba4b5a0}
+.minimal-counter strong{color:#f7f0f2;text-shadow:0 4px 26px #e7a3b51a;font-weight:300}
+.panel{border-color:#49343c;background:#1b171a;box-shadow:none}
+.field{background:#141114;border-color:#49343c;color:#f7f0f2}
+.field:focus{border-color:#b77b8a;box-shadow:0 0 0 2px #b77b8a20}
+.btn{background:#21191e;border-color:#69434f;color:#e9cbd3;box-shadow:none}
+.btn:hover{background:#39232b;border-color:#b77b8a}
+.btn.primary{background:#884252;border-color:#a76677;color:#fff0f4}
+.btn.primary:hover{background:#985165}
+.notice{background:linear-gradient(110deg,#28181f,#1a1418);border-color:#60404a;color:#d9c8ce}
+.photo-category-tabs .btn.active{background:linear-gradient(135deg,#62313f,#3b202a);border-color:#d49aaa;color:#fff0f4;box-shadow:inset 0 0 0 1px #d49aaa22}
+.photo-item{border-color:#49343c;background:#171216}
+@media(max-width:700px){
+ .art{background:radial-gradient(circle at 50% 42%,#6d3444 0,#3b202b 28%,#21161d 60%,#120f12 100%)}
+ .card-link:hover{transform:none}
+}
+
 </style></head>
 <body><div class="wrap">
 <header class="top"><a class="brand" href="#">ONLY <span>US</span></a><nav><a href="#story">OUR STORY</a><a href="#private">PRIVATE SPACE</a><a href="#memories">MEMORIES</a></nav></header>
