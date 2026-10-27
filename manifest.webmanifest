@@ -1,0 +1,20 @@
+{
+  "name": "ONLY US — 我们的私人时光",
+  "short_name": "ONLY US",
+  "description": "只属于两个人的私人时光空间",
+  "lang": "zh-CN",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#171416",
+  "theme_color": "#171416",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "./icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}
