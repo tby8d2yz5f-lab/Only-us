@@ -462,12 +462,12 @@ function showSpaceHub(){activeFeature=null;$('story').classList.add('hidden');$(
 function openFeature(feature){activeFeature=feature;$('story').classList.add('hidden');$('story').style.display='none';$('memories').classList.add('hidden');$('memories').style.display='none';$('private').classList.remove('hidden');$('private').style.display='';$('private').scrollIntoView({behavior:'smooth',block:'start'});if($('appPanel').classList.contains('hidden')){setTimeout(()=>$('loginEmail').focus({preventScroll:true}),350);return;}applyFeatureView();}
 function applyFeatureView(){if(!activeFeature)return;const targetId=featureTargets[activeFeature]||'coupleHomePanel';document.querySelectorAll('#appPanel > .panel').forEach(p=>{const isSharedTimeline=activeFeature==='timeline'&&(p.id==='memoryForm'||p.id==='memoryTimelinePanel');p.classList.toggle('hidden',p.id!==targetId&&!isSharedTimeline&&p!==$('appPanel').firstElementChild);});const target=$(targetId);if(target)target.scrollIntoView({behavior:'smooth',block:'start'});}
 $('enterSpaceBtn').addEventListener('click',event=>{event.preventDefault();showSpaceHub()});
-$('hubBackHome').addEventListener('click',showHome);
+$('hubBackHome').addEventListener('click',()=>{if(window.history.length>1)window.history.back();else showHome()});
 document.querySelector('nav a[href="#memories"]').addEventListener('click',event=>{event.preventDefault();showSpaceHub()});
 document.querySelectorAll('[data-feature]').forEach(card=>card.addEventListener('click',event=>{event.preventDefault();openFeature(card.dataset.feature)}));
 document.querySelectorAll('[data-hub-feature]').forEach(card=>card.addEventListener('click',()=>openFeature(card.dataset.hubFeature)));
 $('spaceDays').textContent=Math.max(0,Math.floor((new Date(new Date().getFullYear(),new Date().getMonth(),new Date().getDate())-start)/86400000));
-const backButton=document.createElement('button');backButton.className='btn';backButton.textContent='← 返回首页';backButton.style.marginBottom='12px';backButton.onclick=showHome;$('private').prepend(backButton);
+const backButton=document.createElement('button');backButton.className='btn';backButton.textContent='← 返回上一页';backButton.style.marginBottom='12px';backButton.onclick=()=>{if(activeFeature){showSpaceHub();return;}if(window.history.length>1){window.history.back();return;}showSpaceHub();};$('private').prepend(backButton);
 $('refreshBtn').onclick=loadAll;
 
 if('serviceWorker' in navigator && location.protocol.startsWith('http')){window.addEventListener('load',()=>navigator.serviceWorker.register('./sw.js').catch(()=>{}));}
