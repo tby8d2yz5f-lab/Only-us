@@ -3,11 +3,79 @@
 <style>
 :root{--bg:#171416;--panel:#211d1f;--line:#403438;--text:#f4eeee;--muted:#b8aeb1;--red:#a63a4a;--soft:#d9b6bc}*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 80% 0%,#392127 0,transparent 34%),var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;line-height:1.6}a{color:inherit;text-decoration:none}button,input,textarea,select{font:inherit}button{cursor:pointer}.wrap{width:min(1080px,calc(100% - 32px));margin:auto;padding-bottom:env(safe-area-inset-bottom)}.top{display:flex;align-items:center;justify-content:space-between;padding:calc(20px + env(safe-area-inset-top)) 0 20px;border-bottom:1px solid #ffffff12}.brand{font-size:14px;letter-spacing:.24em;font-weight:700}.brand span,.eyebrow{color:var(--soft)}nav{display:flex;gap:18px;color:var(--muted);font-size:11px;letter-spacing:.08em}.hero{min-height:420px;display:grid;grid-template-columns:1.15fr .85fr;gap:35px;align-items:center;padding:58px 0 38px}.eyebrow{font-size:10px;letter-spacing:.22em;text-transform:uppercase}.hero h1{font-size:clamp(46px,8vw,82px);line-height:.98;letter-spacing:-.05em;margin:18px 0}.hero h1 em{font-style:normal;color:var(--soft)}.intro{color:var(--muted);max-width:440px;font-size:14px}.date{margin-top:24px;color:var(--soft);font-size:11px;letter-spacing:.13em}.days{margin-top:6px;font-size:18px}.days strong{font-size:36px;color:#fff;margin-right:8px}.art{min-height:290px;border:1px solid var(--line);border-radius:48% 48% 12px 12px;position:relative;overflow:hidden;background:linear-gradient(150deg,#43232d,#241b20 54%,#171416);display:flex;align-items:center;justify-content:center}.art:before,.art:after{content:"";position:absolute;border:1px solid #d9b6bc44;border-radius:50%;width:220px;height:220px}.art:after{width:290px;height:290px}.heart{font-size:68px;color:#d5a0aa;z-index:1}.artnote{position:absolute;bottom:20px;font-size:9px;letter-spacing:.2em;color:#c8b4b9}.section{padding:36px 0}.sectionhead{display:flex;justify-content:space-between;align-items:end;gap:16px;margin-bottom:18px}.section h2{font-size:24px;margin:5px 0}.sectionhead p,.muted{color:var(--muted);font-size:12px}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.card,.panel{padding:20px;border:1px solid var(--line);border-radius:12px;background:linear-gradient(145deg,#251f22,#1b181a)}.card-link{display:block;transition:transform .18s ease,border-color .18s ease}.card-link:active{transform:scale(.99)}.card-link:focus-visible{outline:2px solid var(--soft);outline-offset:3px}.card-link:hover{border-color:#8b5963}.card h3{font-size:15px;margin:12px 0 5px}.card p{font-size:12px;color:var(--muted);margin:0}.icon{color:var(--soft);font-size:20px}.pill,.btn{display:inline-block;border:1px solid #7d4852;border-radius:99px;padding:9px 14px;color:var(--soft);background:transparent;font-size:12px}.btn.primary{background:#71313d;color:#fff}.btn.danger{border-color:#65404a;color:#e4a9b3}.actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}.panel{margin:14px 0}.authgrid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.field{width:100%;background:#171416;border:1px solid var(--line);color:var(--text);border-radius:8px;padding:11px 12px;margin:5px 0 10px}.field:focus{outline:1px solid var(--soft)}textarea.field{min-height:90px;resize:vertical}.row{display:grid;grid-template-columns:1fr 1fr;gap:10px}.entry{padding:14px 0;border-bottom:1px solid #ffffff12}.entry:last-child{border:0}.entry h4{margin:0 0 4px;font-weight:600}.entry p{white-space:pre-wrap;color:#d0c4c7;font-size:13px;margin:4px 0}.entry small{color:var(--soft)}.notice{border:1px solid #a63a4a66;background:#2a1b20;border-radius:10px;padding:13px 15px;color:#e6cdd1;font-size:12px;margin-top:14px}.hidden{display:none!important}.photo-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.photo-grid img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:8px;border:1px solid var(--line)}.footer{border-top:1px solid #ffffff12;padding:22px 0 36px;color:var(--muted);font-size:11px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
 @media(max-width:700px){nav{gap:10px;font-size:9px}.hero{grid-template-columns:1fr;padding:42px 0 20px;gap:20px}.art{min-height:230px}.grid,.authgrid,.row{grid-template-columns:1fr}.sectionhead{display:block}.sectionhead p{margin-top:7px}.top{align-items:flex-start}}
+
+/* Homepage visual refinement */
+:root{--bg:#100d10;--panel:#1b171a;--line:#49343c;--text:#f7f0f2;--muted:#b8a9af;--soft:#e6b9c4}
+body{background:radial-gradient(ellipse at 74% 9%,#55253255 0,transparent 32%),radial-gradient(ellipse at 8% 42%,#35202a55 0,transparent 30%),#100d10}
+.wrap{width:min(1120px,calc(100% - 40px))}
+.top{padding-top:calc(24px + env(safe-area-inset-top));padding-bottom:22px;border-bottom-color:#ffffff18}
+.brand{font-size:13px;letter-spacing:.3em}
+.brand span{color:#f0b9c6}
+nav a{transition:color .2s ease}
+nav a:hover{color:#f0c5ce}
+.hero{min-height:490px;padding:76px 0 60px;gap:clamp(28px,6vw,78px)}
+.hero>div:first-child{position:relative;z-index:1}
+.hero .eyebrow{display:inline-flex;align-items:center;gap:10px;color:#e8aebb}
+.hero .eyebrow:before{content:"";display:inline-block;width:24px;height:1px;background:#b86c7d}
+.hero h1{font-size:clamp(54px,8.6vw,100px);font-weight:500;letter-spacing:-.065em;line-height:.92;margin:24px 0 25px}
+.hero h1 em{background:linear-gradient(105deg,#f5dce2,#c98193 78%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.intro{font-size:14px;line-height:2;max-width:380px;color:#c3b5ba}
+.date{font-size:10px;letter-spacing:.18em;margin-top:29px;color:#d5a0ad}
+.days{font-size:13px;color:#cbbbc0;margin:8px 0 25px}
+.days strong{font-size:42px;font-weight:500;letter-spacing:-.04em;color:#fff;margin-right:7px}
+.pill{padding:12px 18px;border-color:#87515f;color:#f1cbd3;transition:background .2s ease,transform .2s ease}
+.pill:hover{background:#6e3441;transform:translateY(-2px)}
+.art{min-height:370px;border:1px solid #71424e;border-radius:48% 48% 8px 8px;background:radial-gradient(circle at 50% 42%,#6d3444 0,#3b202b 28%,#21161d 60%,#120f12 100%);box-shadow:inset 0 0 55px #100b10aa,0 24px 70px #0005}
+.art:before,.art:after{border-color:#f0c3cf30;box-shadow:0 0 28px #e3a8b61a}
+.art:before{width:210px;height:210px}
+.art:after{width:285px;height:285px}
+.heart{font-size:76px;font-weight:200;color:#f0b8c5;text-shadow:0 0 35px #f29bb866;animation:heartPulse 4s ease-in-out infinite}
+.art:before{animation:orbit 24s linear infinite}
+.artnote{bottom:24px;color:#d9b4be;font-size:9px;letter-spacing:.25em}
+.art-label{position:absolute;top:25px;left:0;right:0;text-align:center;color:#e5c5cc;font-size:9px;letter-spacing:.22em}
+.art-corner{position:absolute;right:18px;bottom:58px;font-size:10px;color:#c49aa5;letter-spacing:.1em}
+.section{padding:52px 0}
+.sectionhead{margin-bottom:22px}
+.section h2{font-weight:500;letter-spacing:-.03em;font-size:clamp(23px,3vw,30px)}
+#memories .sectionhead{align-items:center;margin-bottom:24px}
+#memories .sectionhead .eyebrow{color:#e2aab8}
+.grid{gap:14px}
+.card{position:relative;min-height:154px;padding:23px 22px;border-radius:13px;border-color:#392b31;background:linear-gradient(145deg,#21191e,#171316 78%);overflow:hidden}
+.card:after{content:"";position:absolute;width:100px;height:100px;right:-55px;bottom:-60px;border:1px solid #d79baa20;border-radius:50%;transition:transform .25s ease}
+.card-link:hover{border-color:#8e5262;transform:translateY(-3px);background:linear-gradient(145deg,#2b1c23,#191417)}
+.card-link:hover:after{transform:scale(1.5)}
+.card .icon{display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border:1px solid #71424e;border-radius:50%;background:#3b202a;color:#f0bdc8;font-size:18px}
+.card h3{font-size:15px;font-weight:500;letter-spacing:.02em;margin:15px 0 7px}
+.card p{font-size:12px;line-height:1.8;color:#b9aab0;max-width:250px}
+#installTip{border-color:#60404a;background:linear-gradient(110deg,#28181f,#1a1418);line-height:1.9}
+.footer{margin-top:22px;border-top-color:#ffffff18;letter-spacing:.04em}
+@keyframes heartPulse{0%,100%{transform:scale(1);opacity:.92}50%{transform:scale(1.06);opacity:1}}
+@keyframes orbit{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
+@media(prefers-reduced-motion:reduce){.heart,.art:before{animation:none!important}*,*:before,*:after{scroll-behavior:auto!important;transition:none!important}}
+@media(max-width:700px){
+ .wrap{width:calc(100% - 30px)}
+ .top{padding-bottom:17px}
+ nav{gap:12px;font-size:9px}
+ .hero{padding:54px 0 35px;gap:28px;min-height:unset}
+ .hero h1{font-size:clamp(56px,15vw,78px);margin:22px 0}
+ .intro{font-size:13px}
+ .art{min-height:275px;border-radius:46% 46% 8px 8px}
+ .art:after{width:240px;height:240px}
+ .art:before{width:178px;height:178px}
+ .section{padding:38px 0}
+ .grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+ .card{min-height:150px;padding:17px 15px}
+ .card h3{font-size:14px;margin-top:12px}
+ .card p{font-size:11px;line-height:1.7}
+ .sectionhead p{line-height:1.8}
+}
+@media(max-width:380px){nav{gap:8px;font-size:8px}.grid{grid-template-columns:1fr}.card{min-height:unset}}
+
 </style></head>
 <body><div class="wrap">
 <header class="top"><a class="brand" href="#">ONLY <span>US</span></a><nav><a href="#story">OUR STORY</a><a href="#private">PRIVATE SPACE</a><a href="#memories">MEMORIES</a></nav></header>
 <main>
-<section class="hero" id="story"><div><div class="eyebrow">A PRIVATE PLACE FOR TWO</div><h1>Only us,<br><em>always.</em></h1><p class="intro">把平凡日子里值得珍藏的瞬间，留给我们自己。这里是属于两个人的小小宇宙。</p><div class="date">OUR STORY BEGAN · 2026.08.21</div><div class="days"><strong id="days">—</strong>天，正在一起书写</div><a class="pill" href="#private">进入我们的空间 ↓</a></div><div class="art"><div class="heart">♡</div><div class="artnote">JUST YOU · JUST ME · JUST US</div></div></section>
+<section class="hero" id="story"><div><div class="eyebrow">A PRIVATE PLACE FOR TWO</div><h1>Only us,<br><em>always.</em></h1><p class="intro">把平凡日子里值得珍藏的瞬间，留给我们自己。这里是属于两个人的小小宇宙。</p><div class="date">OUR STORY BEGAN · 2026.08.21</div><div class="days"><strong id="days">—</strong>天，正在一起书写</div><a class="pill" href="#private">进入我们的空间 ↓</a></div><div class="art"><div class="art-label">A LITTLE WORLD OF OUR OWN</div><div class="heart">♡</div><div class="art-corner">EST. 2026</div><div class="artnote">JUST YOU · JUST ME · JUST US</div></div></section>
 <div class="notice" id="installTip">把 ONLY US 添加到手机主屏幕：iPhone 请在 Safari 点“分享”→“添加到主屏幕”；安卓浏览器可从菜单选择“安装应用”或“添加到主屏幕”。<button class="btn" id="hideInstallTip" style="margin-left:8px">知道了</button></div><section class="section hidden" id="private"><div class="sectionhead"><div><div class="eyebrow">PRIVATE SPACE</div><h2>只属于你们的空间</h2></div><p>请使用自己的账号登录</p></div>
 <div id="authPanel" class="panel"><p class="muted">登录后可记录共同回忆。请勿在公共设备上保持登录。</p><div class="authgrid"><div><h3>登录</h3><label class="muted" for="loginEmail">邮箱</label><input class="field" id="loginEmail" type="email" autocomplete="email" placeholder="邮箱地址"><label class="muted" for="loginPassword">密码</label><input class="field" id="loginPassword" type="password" autocomplete="current-password" placeholder="密码"><button class="btn primary" id="loginBtn">登录</button></div></div><div id="authMsg" class="notice hidden" role="status"></div></div>
 <div id="appPanel" class="hidden"><div class="panel"><div class="sectionhead"><div><div class="eyebrow">SIGNED IN</div><h2 id="userLabel">已登录</h2><p class="muted">情侣空间：ONLY US</p></div><button class="btn" id="logoutBtn">退出登录</button></div><div id="appMsg" class="notice hidden" role="status"></div></div>
